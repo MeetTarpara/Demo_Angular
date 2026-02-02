@@ -1,0 +1,33 @@
+<p>form-demo works!</p>
+
+<div>
+
+    <h1>Simple form</h1>
+    <form [formGroup]="profileForm" (ngSubmit)="submitData()">
+        <input type="text" placeholder="Enter name" formControlName="name">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+
+    <h1>Form with validation</h1>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div>
+            <input placeholder="Name" formControlName="name">
+            <input placeholder="Email" formControlName="email">
+            <input placeholder="password" formControlName="password">
+
+            <button type="submit" [disabled]="userForm.invalid" >Submit</button>
+        </div>
+    </form>
+
+    <!-- <button [@if]="showButton" class="btn btn-success">
+        Submit
+      </button>
+      
+      <button class="btn btn-secondary" (click)="toggleButton()">
+        Toggle Button
+      </button> -->
+      
+</div>

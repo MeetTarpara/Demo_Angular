@@ -1,0 +1,18 @@
+<h3> Child Component (Profile)</h3>
+
+<!-- Display Parent Data -->
+<p>Welcome, {{ userName }}</p>
+
+<!-- Two Way Binding -->
+<input 
+  [(ngModel)]="status"
+  placeholder="Enter your status">
+
+  <input 
+  [(ngModel)]="msg"
+  placeholder="Enter your Msg to pass parent">
+
+<!-- Event Binding -->
+<button (click)="sendStatus()">
+  Send Status to Parent
+</button>

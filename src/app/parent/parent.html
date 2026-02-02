@@ -1,0 +1,27 @@
+<h2> Component (Dashboard)</h2>
+
+<!-- One Way Data Binding -->
+<p>Username: {{ username }}</p>
+
+<!-- Property Binding -->
+<input [value]="username" readonly>
+
+<hr>
+
+<!-- Send Data to Child -->
+<app-child 
+  [userName]="username"
+  (statusEvent)="receiveStatus($event)"
+  (strmsg)="msgData($event)"
+  >
+</app-child>
+
+<hr>
+
+<h3>Status received from Child:</h3>
+<p>{{ childStatus }}</p>
+
+<hr>
+<h3>msg received from Child:</h3>
+<p>{{ childMsg }}</p>
+<p>{{result}}</p>
