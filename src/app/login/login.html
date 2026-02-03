@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeCare Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+   
+</head>
+<body>
+ 
+<div class="container-fluid p-0 login-container">
+    <div class="row g-0 h-100">
+        <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center p-5 bg-white">
+            <div style="width: 100%; max-width: 350px;">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold">H<span class="txt-color">o</span>meCare</h2>
+                    <h5 class="text-secondary mt-4">Sign in to continue</h5>
+                </div>
+ 
+                <form #otpForm="ngForm" (ngSubmit)="getOtp(otpForm)">
+  
+                    <div class="mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Name"
+                        name="name"
+                        ngModel
+                        required
+                      />
+                    </div>
+                  
+                    <div class="mb-4 position-relative">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email"
+                        name="email"
+                        ngModel
+                        required
+                        email
+                      />
+                      <i class="bi bi-envelope position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+                    </div>
+                  
+                    <button
+                      type="submit"
+                      class="btn btn-primary w-100 mb-3"
+                      [disabled]="otpForm.invalid"
+                      style="background-color: #4a46ff;"
+                    >
+                      Get OTP
+                    </button>
+                  
+                    <p class="text-center legal-text">
+                      By Clicking on Sign In, I accept the
+                      <a href="#" class="txt-color">
+                        Terms & Condition
+                      </a>
+                      &
+                      <a href="#" class="txt-color">
+                        Privacy Policy
+                      </a>
+                    </p>
+                  
+                    <div class="divider">OR</div>
+                  
+                    <div class="text-center">
+                      <p class="mb-1 text-secondary fw-bold">Are You a Service Partner?</p>
+                      <a href="#"class="txt-color">Join Now</a>
+                    </div>
+                  
+                  </form>
+                  
+            </div>
+        </div>
+ 
+        <div class="col-lg-6 d-none d-lg-block collage-container">
+            <div class="row h-100 g-2 p-2">
+                <div class="col-6 h-100">
+                    <div class="h-50 mb-2"><img src="https://media.istockphoto.com/id/1149340384/photo/traditional-victorian-cottage-style-homes-in-a-residential-neighborhood-captured-in-black-and.jpg?s=612x612&w=0&k=20&c=DqzBEG6Gcr3QdC81l-pNhgIrXA1i0FiQfTZTZjdXQwc=" class="collage-img rounded"></div>
+                    <div class="h-50"><img src="https://cdn.home-designing.com/wp-content/uploads/2016/10/minimalist-living-room-abstract-wall-art-black-and-white.jpg" class="collage-img rounded"></div>
+                </div>
+                <div class="col-6 h-100">
+                    <div class="h-25 mb-2"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=500" class="collage-img rounded"></div>
+                    <div class="h-75"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=500" class="collage-img rounded"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+</body>
+</html>

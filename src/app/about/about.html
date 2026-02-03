@@ -1,1 +1,108 @@
 <p>about works!</p>
+<div class="container contact-section">
+    <div class="row g-4 align-items-stretch">
+        
+        <div class="col-lg-5">
+            <div class="contact-info-card h-100">
+                <div class="info-item">
+                    <div class="icon-box"><i class="bi bi-telephone"></i></div>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <hr class="divider">
+                <div class="info-item">
+                    <div class="icon-box"><i class="fa fa-envelope"></i></div>
+                    <p>example.email@domain.com</p>
+                </div>
+                <hr class="divider">
+                <div class="info-item">
+                    <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
+                    <p>1234 Elm Street, Apt 567,<br>Springfield, IL 62704</p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="col-lg-7">
+            <div class="form-container p-4 ">
+                <h2 class="mb-4 fw-bold">Get in Touch</h2>
+                
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <div class="row g-3">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" formControlName="firstName" class="form-control"
+                                   [class.is-invalid]="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched"
+                                   placeholder="First Name">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" formControlName="lastName" class="form-control"
+                                   [class.is-invalid]="contactForm.get('lastName')?.invalid && contactForm.get('lastName')?.touched"
+                                   placeholder="Last Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" formControlName="mobileNumber" class="form-control"
+                                   [class.is-invalid]="contactForm.get('mobileNumber')?.invalid && contactForm.get('mobileNumber')?.touched"
+                                   placeholder="Mobile Number">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" formControlName="email" class="form-control"
+                                   [class.is-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                                   placeholder="Email">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <textarea formControlName="description" class="form-control" rows="5"
+                                      [class.is-invalid]="contactForm.get('description')?.invalid && contactForm.get('description')?.touched"
+                                      placeholder="Description"></textarea>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn btn-submit px-5" [disabled]="contactForm.invalid">
+                                Send Message
+                            </button>
+
+                           
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+ 
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="row g-3">
+
+      <div class="col-md-6 mb-3">
+        <input
+          type="text"
+          formControlName="firstName"
+          class="form-control"
+          placeholder="First Name"
+        />
+        <div class="text-danger mt-1" *ngIf="contactForm.get('firstName')?.touched && contactForm.get('firstName')?.invalid">
+          <div *ngIf="contactForm.get('firstName')?.errors?.['required']">
+            First Name is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 mt-4">
+        <button type="submit" class="btn btn-submit px-5" [disabled]="contactForm.invalid">
+          Send Message
+        </button>
+      </div>
+  
+    </div>
+  </form> -->
+  
+
+  
