@@ -27,6 +27,7 @@ export class About implements OnInit {
   onSubmit(): void {
     if (this.contactForm.valid) {
       console.log('Form Data', this.contactForm.value);
+      alert('form is submited')
       
     } else {
       console.error('Form is invalid.');

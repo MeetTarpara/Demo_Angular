@@ -15,9 +15,9 @@ body {
     padding: 2rem 0;
 }
  
-/* Left Card Styling */
+
 .contact-info-card {
-    background: linear-gradient(135deg, #4b39ef 0%, #3b2cc4 100%);
+     background-color: #3b2cc4;
     color: white;
     padding: 3rem 2rem;
     border-radius: 25px;
@@ -56,7 +56,7 @@ body {
     opacity: 1;
 }
  
-/* Form Styling */
+
 .form-container h2 {
     color: #333;
 }
@@ -89,7 +89,7 @@ body {
     transform: translateY(-2px);
 }
  
-/* Responsive Adjustments */
+
 @media (max-width: 991px) {
     .contact-info-card {
         border-radius: 20px;

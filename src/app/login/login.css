@@ -31,10 +31,10 @@ html {
   background-color: #3b38d1;
 }
 .collage-container {
-  background-color: #f8f9fa;
+  background-color: #dfdfdf;
   overflow: hidden;
 }
-/* Style to simulate the purple overlay in your image */
+
 .collage-img {
   width: 100%;
   height: 100%;
