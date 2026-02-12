@@ -1,1 +1,6 @@
-<p>home works!</p>
+
+  <h1>home</h1>
+  <button (click)="changeMessage()">Change Input</button>
+  <button (click)="toggle()">Destroy Child</button>
+
+  <app-child-hook *ngIf="showChild" [message]="parentMessage"></app-child-hook>

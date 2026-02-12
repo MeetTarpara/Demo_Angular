@@ -6,6 +6,8 @@ import { ParentComponent } from './parent/parent';
 import { PipeDirective } from './pipe-directive/pipe-directive';
 import { Login } from './login/login';
 import { Dashboard } from './dashboard/dashboard';
+import { ProductComponent } from './product-component/product-component';
+import { RxjsDemo } from './rxjs-demo/rxjs-demo';
 
 export const routes: Routes = [
 
@@ -37,10 +39,18 @@ export const routes: Routes = [
             path: 'parent',
             component: ParentComponent,
           },
-          {
+          { 
             path: 'pipe-directive',
             component: PipeDirective,
           },
+          { 
+            path: 'product',
+            component: ProductComponent,
+          },
+          { 
+            path: 'rxjs',
+            component:RxjsDemo,
+          }
         
         ]
     },
