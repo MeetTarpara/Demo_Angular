@@ -9,7 +9,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-root',
   imports: [RouterOutlet, FormsModule,CommonModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  
 })
 export class App {
   protected readonly title = signal('Demo1');

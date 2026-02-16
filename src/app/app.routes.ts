@@ -8,10 +8,16 @@ import { Login } from './login/login';
 import { Dashboard } from './dashboard/dashboard';
 import { ProductComponent } from './product-component/product-component';
 import { RxjsDemo } from './rxjs-demo/rxjs-demo';
+import { Login2Component } from './login-2-component/login-2-component';
+import { Register2Component } from './register-2-component/register-2-component';
+import { PersonComponent } from './person-component/person-component';
 
 export const routes: Routes = [
 
-    {path:'',component:Login},
+    {path:'',component:Login2Component},
+    {path:'login2',component:Login2Component},
+    {path:'register',component:Register2Component},
+
     {path:'login',component:Login},
 
     {   
@@ -50,6 +56,14 @@ export const routes: Routes = [
           { 
             path: 'rxjs',
             component:RxjsDemo,
+          },
+          { 
+            path: 'login2',
+            component:Login2Component,
+          },
+          { 
+            path: 'person',
+            component:PersonComponent,
           }
         
         ]

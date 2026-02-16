@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h3 class="mb-3">Persons List</h3>
+  
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr *ngFor="let p of persons">
+          <td>{{p.id}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
