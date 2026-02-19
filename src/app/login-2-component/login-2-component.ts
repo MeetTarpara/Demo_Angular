@@ -25,20 +25,21 @@ export class Login2Component {
       email: this.email,
       password: this.password
     };
-
+console.log(loginData);
     this.authService.login(loginData).subscribe({
       next: (res) => {
+
         if (res.token) {
           localStorage.setItem('token', res.token);
-          localStorage.setItem('name', res.name);
-
-          console.log(localStorage.getItem('token'));
+          localStorage.setItem('email', res.email);
 
           this.router.navigate(['/dashboard/form']);
           console.log(loginData);
         }
       },
       error: (err) => {
+
+
         this.errorMsg = "Invalid Email or Password";
       }
     });
